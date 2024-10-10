@@ -109,7 +109,7 @@ void move(int idx){
     int ncol = players[idx].col + dcol[players[idx].d];
 
     if(nrow < 0 || ncol < 0 || nrow + 1 > n || ncol + 1 > n){
-        players[idx].d = (players[idx].d + 2) % 2;
+        players[idx].d = (players[idx].d + 2) % 4;
         nrow = players[idx].row + drow[players[idx].d];
         ncol = players[idx].col + dcol[players[idx].d];
     }
@@ -138,7 +138,7 @@ void moveSulae(){
     sulae.row = sulae.row + drow[sulae.d];
     sulae.col = sulae.col + dcol[sulae.d];
     
-
+    cout << sulae.row << " " << sulae.col << "\n";
     if(sulae.row == 0 && sulae.col == 0){
         flag = 1;
         max_dist = n;
@@ -184,7 +184,7 @@ void moveSulae(){
 
     
     //cout << reverse_flag << " " << flag << " " << now_dist << " " << max_dist << "\n";
-    //cout << sulae.row << " " << sulae.col << "\n";
+    
 
 }
 
@@ -211,7 +211,7 @@ void getPoint(){
     }
 }
 void macro(){
-        //cout << "술래 이동 후 위치\n";
+        cout << "술래 이동 후 위치\n";
 
     for(turn = 1; turn <= k; turn++){
         movePlayer();
