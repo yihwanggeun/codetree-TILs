@@ -138,7 +138,7 @@ void moveSulae(){
     sulae.row = sulae.row + drow[sulae.d];
     sulae.col = sulae.col + dcol[sulae.d];
     
-    cout << sulae.row << " " << sulae.col << "\n";
+    //cout << sulae.row << " " << sulae.col << "\n";
     if(sulae.row == 0 && sulae.col == 0){
         flag = 1;
         max_dist = n;
@@ -211,7 +211,7 @@ void getPoint(){
     }
 }
 void macro(){
-        cout << "술래 이동 후 위치\n";
+        //cout << "술래 이동 후 위치\n";
 
     for(turn = 1; turn <= k; turn++){
         movePlayer();
